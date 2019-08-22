@@ -1,0 +1,18 @@
+Resources:
+  default:
+    Type: TencentCloud::Serverless::Namespace
+    demotest_xcg:
+      Properties:
+        CodeUri: ./
+        Description: helloworld 空白模板函数
+        Environment:
+          Variables: {}
+        Events: {}
+        Handler: index.main_handler
+        MemorySize: 128
+        Runtime: Nodejs8.9
+        Timeout: 3
+        VpcConfig:
+          SubnetId: ""
+          VpcId: ""
+      Type: TencentCloud::Serverless::Function
